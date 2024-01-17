@@ -1,3 +1,5 @@
+import Person from './Person';
+
 const List = ({ people }) => {
   return (
     <section>
@@ -7,4 +9,5 @@ const List = ({ people }) => {
     </section>
   );
 };
+
 export default List;
