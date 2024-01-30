@@ -10,6 +10,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   // uncomment
   const [jobs, setJobs] = useState(data);
+  const [currentItem, setCurrentItem] = useState(0);
   // current item
 
   const fetchJobs = async () => {
@@ -35,9 +36,13 @@ const App = () => {
   return (
     <section className="jobs-center">
       {/* button container */}
-      <BtnContainer jobs={jobs} />
+      <BtnContainer
+        jobs={jobs}
+        currentItem={currentItem}
+        setCurrentItem={setCurrentItem}
+      />
       {/* job info */}
-      <JobInfo jobs={jobs} />
+      <JobInfo jobs={jobs} currentItem={currentItem} />
     </section>
   );
 };
